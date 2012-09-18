@@ -62,10 +62,10 @@ when "fedora"
 
 when "amazon"
 
-  default[:postgresql][:version] = "8.4"
-  set[:postgresql][:dir] = "/var/lib/pgsql/data"
-  default['postgresql']['client']['packages'] = %w{postgresql-devel}
-  default['postgresql']['server']['packages'] = %w{postgresql-server}
+  default[:postgresql][:version] = "9.1"
+  set[:postgresql][:dir] = "/var/lib/pgsql9/data"
+  default['postgresql']['client']['packages'] = %w{postgresql9-devel}
+  default['postgresql']['server']['packages'] = %w{postgresql9-server}
 
 when "redhat","centos","scientific"
 
